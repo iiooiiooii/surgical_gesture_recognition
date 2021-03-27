@@ -10,4 +10,6 @@ PyTorch implementation of video-based surgical gesture recognition using 3D conv
 ### How to start
 Simply clone this repository:
 ```bash
+cd <the directory where the repo shall live>
+
 
