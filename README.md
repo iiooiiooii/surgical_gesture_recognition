@@ -11,5 +11,7 @@ PyTorch implementation of video-based surgical gesture recognition using 3D conv
 Simply clone this repository:
 ```bash
 cd <the directory where the repo shall live>
+git clone https://gitlab.com/nct_tso_public/surgical_gesture_recognition.git
+```
 
 
