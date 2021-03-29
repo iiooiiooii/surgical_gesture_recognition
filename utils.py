@@ -23,3 +23,8 @@ def log(file, msg):
     file.write(time.strftime("[%d.%m.%Y %H:%M:%S]: ") + msg + os.linesep)
 
 
+
+class AverageMeter(object):
+    """Computes and stores the average and current value"""
+    def __init__(self):
+        self.reset()
