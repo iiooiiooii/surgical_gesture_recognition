@@ -10,4 +10,6 @@ splits_LOUO_NP = ['data_B.csv', 'data_C.csv', 'data_D.csv', 'data_E.csv', 'data_
 
 gestures_SU = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G8', 'G9', 'G10', 'G11']
 gestures_NP = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G8', 'G11']
+gestures_KT = ['G1', 'G11', 'G12', 'G13', 'G14', 'G15']
+
 
