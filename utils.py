@@ -13,3 +13,13 @@ gestures_NP = ['G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G8', 'G11']
 gestures_KT = ['G1', 'G11', 'G12', 'G13', 'G14', 'G15']
 
 
+def log(file, msg):
+    """Log a message.
+
+    :param file: File object to which the message will be written.
+    :param msg:  Message to log (str).
+    """
+    print(time.strftime("[%d.%m.%Y %H:%M:%S]: "), msg, file=stderr)
+    file.write(time.strftime("[%d.%m.%Y %H:%M:%S]: ") + msg + os.linesep)
+
+
