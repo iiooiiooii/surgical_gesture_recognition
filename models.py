@@ -29,4 +29,14 @@ class GestureClassifier(nn.Module):
             if self.modality == 'Flow':
                 self.input_mean = [0.5]
                 self.input_std = [np.mean(self.input_std)]
+                
+
+            self.base_model = resnet18(
+                sample_size=self.input_size,
+                sample_duration=self.snippet_length,
+                shortcut_type=('B' if use_resnet_shortcut_type_B else 'A'),
+                num_classes=num_cls_Kinetics,
+                skip_classifier=True,
+                no_initial_temporal_pooling=True)
+
 
