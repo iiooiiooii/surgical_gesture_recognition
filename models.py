@@ -38,5 +38,7 @@ class GestureClassifier(nn.Module):
                 num_classes=num_cls_Kinetics,
                 skip_classifier=True,
                 no_initial_temporal_pooling=True)
-
+            
+            if pretrained_model:
+                print('loading pretrained model {}'.format(pretrained_model))
 
