@@ -42,3 +42,35 @@ class GestureClassifier(nn.Module):
             if pretrained_model:
                 print('loading pretrained model {}'.format(pretrained_model))
 
+               if bootstrap_from_2D:
+                    model_weights = torch.load(pretrained_model)
+                    model_weights = {k if 'base_model' not in k else '.'.join(k.split('.')[1:]): v
+                                     for k, v in list(model_weights.items())}
+                    print("inflate 2D weights...")
+                    for k in model_weights:
+                        tensor = model_weights[k]
+                        if len(tensor.shape) == 4:
+                            model_weights[k] = inflate_weights(tensor, tensor.shape[-1])  # symmetric kernel
+                    self.base_model.load_state_dict(model_weights, strict=False)
+                else:
+                    checkpoint = torch.load(pretrained_model)
+                    assert checkpoint['arch'] == "resnet-18"
+                    model_weights = {'.'.join(k.split('.')[1:]): v for k, v in list(checkpoint['state_dict'].items())}
+                    self.base_model.load_state_dict(model_weights, strict=False)
+
+            self._add_upsampling_layers(num_class)
+
+        elif base_model == 'resnet18':  # 2D baseline model
+            if self.modality == 'RGB':
+                assert(snippet_length == 1)
+            elif self.modality == 'Flow':
+                assert(snippet_length == 5)
+            self.snippet_length = snippet_length
+            self.input_size = input_size
+            self.input_mean = [0.485, 0.456, 0.406]
+            self.input_std = [0.229, 0.224, 0.225]
+            if self.modality == 'Flow':
+                self.input_mean = [0.5]
+                self.input_std = [np.mean(self.input_std)]
+
+            self.base_model = torchvision.models.resnet18(pretrained=True)
