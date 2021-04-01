@@ -97,3 +97,9 @@ class GestureClassifier(nn.Module):
 
         self.up_conv = nn.ConvTranspose1d(in_channels, num_class, 11, stride=5, padding=0, output_padding=0,
                                           groups=1, bias=True, dilation=1)
+        
+        for module in self.up_conv.modules():
+            if isinstance(module, nn.ConvTranspose1d) or isinstance(module, nn.Conv1d):
+                nn.init.kaiming_normal_(module.weight, mode='fan_out', nonlinearity='relu')
+
+
