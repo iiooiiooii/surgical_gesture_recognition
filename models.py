@@ -89,5 +89,9 @@ class GestureClassifier(nn.Module):
 
         else:
             raise ValueError('Unknown base model: {}'.format(base_model))
+    def _add_upsampling_layers(self, num_class):
+        in_channels = None
+        if self.arch == "3D-ResNet-18":
+            in_channels = 512
 
 
