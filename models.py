@@ -80,3 +80,6 @@ class GestureClassifier(nn.Module):
             feature_dim = getattr(self.base_model, last_layer_name).in_features
             setattr(self.base_model, last_layer_name, nn.Dropout(p=dropout))
             self.new_fc = nn.Linear(feature_dim, num_class)
+            std = 0.001
+            normal(self.new_fc.weight, 0, std)
+            constant(self.new_fc.bias, 0)
