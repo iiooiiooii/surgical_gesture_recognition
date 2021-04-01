@@ -104,3 +104,7 @@ class GestureClassifier(nn.Module):
                 if module.bias is not None:
                     torch.nn.init.constant_(module.bias, 0.001)
 
+                    
+    def forward(self, input):
+        sample_len = (3 if self.modality == "RGB" else 2) * self.snippet_length
+
