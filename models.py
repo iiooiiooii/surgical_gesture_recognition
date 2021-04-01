@@ -95,3 +95,5 @@ class GestureClassifier(nn.Module):
             in_channels = 512
 
 
+        self.up_conv = nn.ConvTranspose1d(in_channels, num_class, 11, stride=5, padding=0, output_padding=0,
+                                          groups=1, bias=True, dilation=1)
