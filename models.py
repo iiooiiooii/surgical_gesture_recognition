@@ -83,3 +83,11 @@ class GestureClassifier(nn.Module):
             std = 0.001
             normal(self.new_fc.weight, 0, std)
             constant(self.new_fc.bias, 0)
+            
+            if self.modality == 'Flow':
+                self.base_model = self._construct_flow_model(self.base_model)
+
+        else:
+            raise ValueError('Unknown base model: {}'.format(base_model))
+
+
