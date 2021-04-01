@@ -101,5 +101,6 @@ class GestureClassifier(nn.Module):
         for module in self.up_conv.modules():
             if isinstance(module, nn.ConvTranspose1d) or isinstance(module, nn.Conv1d):
                 nn.init.kaiming_normal_(module.weight, mode='fan_out', nonlinearity='relu')
-
+                if module.bias is not None:
+                    torch.nn.init.constant_(module.bias, 0.001)
 
