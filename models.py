@@ -74,3 +74,9 @@ class GestureClassifier(nn.Module):
                 self.input_std = [np.mean(self.input_std)]
 
             self.base_model = torchvision.models.resnet18(pretrained=True)
+            
+            # adapt base model
+            last_layer_name = 'fc'
+            feature_dim = getattr(self.base_model, last_layer_name).in_features
+            setattr(self.base_model, last_layer_name, nn.Dropout(p=dropout))
+            self.new_fc = nn.Linear(feature_dim, num_class)
