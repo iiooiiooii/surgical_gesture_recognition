@@ -107,4 +107,7 @@ class GestureClassifier(nn.Module):
                     
     def forward(self, input):
         sample_len = (3 if self.modality == "RGB" else 2) * self.snippet_length
+        
+        if not self.is_3D_architecture:
+            input = input.view((-1, sample_len) + input.size()[-2:])
 
