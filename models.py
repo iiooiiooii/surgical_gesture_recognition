@@ -144,3 +144,4 @@ class GestureClassifier(nn.Module):
                                                                            more_fix_crop=crop_corners),
                                                        GroupRandomHorizontalFlip(is_flow=True)])
         else:
+            if self.modality == 'RGB':
