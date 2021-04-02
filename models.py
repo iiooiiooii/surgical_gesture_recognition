@@ -112,3 +112,5 @@ class GestureClassifier(nn.Module):
             input = input.view((-1, sample_len) + input.size()[-2:])
 
         base_out = self.base_model(input)
+        if not self.is_3D_architecture:
+            if self.new_fc is not None:
