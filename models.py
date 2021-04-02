@@ -117,3 +117,4 @@ class GestureClassifier(nn.Module):
                 base_out = self.new_fc(base_out)
             out = base_out
         else:
+            out = base_out.view(base_out.size(0), base_out.size(1), -1)
