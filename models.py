@@ -121,3 +121,5 @@ class GestureClassifier(nn.Module):
             out = self.up_conv(out)
 
         return out
+    def crop_size(self):
+        return self.input_size
