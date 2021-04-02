@@ -148,3 +148,4 @@ class GestureClassifier(nn.Module):
                return torchvision.transforms.Compose([GroupMultiScaleCrop(self.input_size, [1, .875, .75, .66],
                                                                            fix_crop=crop_corners,
                                                                            more_fix_crop=crop_corners)])
+            elif self.modality == 'Flow':
