@@ -155,3 +155,4 @@ class GestureClassifier(nn.Module):
    """
     https://github.com/iiooiiooii/surgical_gesture_recognition/edit/main/models.py
    """
+    def _construct_flow_model(self, base_model, in_channels=-1):
