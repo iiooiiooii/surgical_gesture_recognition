@@ -145,3 +145,4 @@ class GestureClassifier(nn.Module):
                                                        GroupRandomHorizontalFlip(is_flow=True)])
         else:
             if self.modality == 'RGB':
+               return torchvision.transforms.Compose([GroupMultiScaleCrop(self.input_size, [1, .875, .75, .66],
