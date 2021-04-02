@@ -143,3 +143,4 @@ class GestureClassifier(nn.Module):
                                                                            fix_crop=crop_corners,
                                                                            more_fix_crop=crop_corners),
                                                        GroupRandomHorizontalFlip(is_flow=True)])
+        else:
