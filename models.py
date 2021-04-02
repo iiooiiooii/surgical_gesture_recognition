@@ -146,3 +146,5 @@ class GestureClassifier(nn.Module):
         else:
             if self.modality == 'RGB':
                return torchvision.transforms.Compose([GroupMultiScaleCrop(self.input_size, [1, .875, .75, .66],
+                                                                           fix_crop=crop_corners,
+                                                                           more_fix_crop=crop_corners)])
