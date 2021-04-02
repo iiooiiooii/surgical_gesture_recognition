@@ -129,3 +129,7 @@ class GestureClassifier(nn.Module):
     
     def is_3D_architecture(self):
         return '3d' in self.arch.casefold()
+
+    def get_augmentation(self, crop_corners=True, do_horizontal_flip=True):
+        if do_horizontal_flip:
+            if self.modality == 'RGB':
