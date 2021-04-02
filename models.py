@@ -126,3 +126,6 @@ class GestureClassifier(nn.Module):
     
     def scale_size(self):
         return self.input_size * 256 // 224
+    
+    def is_3D_architecture(self):
+        return '3d' in self.arch.casefold()
