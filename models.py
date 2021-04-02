@@ -152,3 +152,6 @@ class GestureClassifier(nn.Module):
                return torchvision.transforms.Compose([GroupMultiScaleCrop(self.input_size, [1, .875, .75],
                                                                            fix_crop=crop_corners,
                                                                            more_fix_crop=crop_corners)])
+   """
+    https://github.com/iiooiiooii/surgical_gesture_recognition/edit/main/models.py
+   """
