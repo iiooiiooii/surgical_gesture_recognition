@@ -123,3 +123,6 @@ class GestureClassifier(nn.Module):
         return out
     def crop_size(self):
         return self.input_size
+    
+    def scale_size(self):
+        return self.input_size * 256 // 224
