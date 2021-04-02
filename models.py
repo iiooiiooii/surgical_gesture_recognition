@@ -133,3 +133,7 @@ class GestureClassifier(nn.Module):
     def get_augmentation(self, crop_corners=True, do_horizontal_flip=True):
         if do_horizontal_flip:
             if self.modality == 'RGB':
+                return torchvision.transforms.Compose([GroupMultiScaleCrop(self.input_size, [1, .875, .75, .66],
+                                                                           fix_crop=crop_corners,
+                                                                           more_fix_crop=crop_corners),
+                                                       GroupRandomHorizontalFlip(is_flow=False)])
