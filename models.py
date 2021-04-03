@@ -158,3 +158,4 @@ class GestureClassifier(nn.Module):
     def _construct_flow_model(self, base_model, in_channels=-1):
         # modify the convolution layers
         # Torch models are usually defined in a hierarchical way.
+        # nn.modules.children() return all sub modules in a DFS manner
