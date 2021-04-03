@@ -163,3 +163,5 @@ class GestureClassifier(nn.Module):
         first_conv_idx = list(filter(lambda x: isinstance(modules[x], nn.Conv2d), list(range(len(modules)))))[0]
         conv_layer = modules[first_conv_idx]
         container = modules[first_conv_idx - 1]
+
+        if in_channels == -1:
