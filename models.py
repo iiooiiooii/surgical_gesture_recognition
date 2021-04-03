@@ -162,3 +162,4 @@ class GestureClassifier(nn.Module):
         modules = list(base_model.modules())
         first_conv_idx = list(filter(lambda x: isinstance(modules[x], nn.Conv2d), list(range(len(modules)))))[0]
         conv_layer = modules[first_conv_idx]
+        container = modules[first_conv_idx - 1]
