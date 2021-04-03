@@ -165,3 +165,4 @@ class GestureClassifier(nn.Module):
         container = modules[first_conv_idx - 1]
 
         if in_channels == -1:
+            in_channels = 2 * self.snippet_length
