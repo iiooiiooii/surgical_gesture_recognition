@@ -161,3 +161,4 @@ class GestureClassifier(nn.Module):
         # nn.modules.children() return all sub modules in a DFS manner
         modules = list(base_model.modules())
         first_conv_idx = list(filter(lambda x: isinstance(modules[x], nn.Conv2d), list(range(len(modules)))))[0]
+        conv_layer = modules[first_conv_idx]
