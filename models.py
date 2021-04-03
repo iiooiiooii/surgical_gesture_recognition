@@ -159,3 +159,4 @@ class GestureClassifier(nn.Module):
         # modify the convolution layers
         # Torch models are usually defined in a hierarchical way.
         # nn.modules.children() return all sub modules in a DFS manner
+        modules = list(base_model.modules())
