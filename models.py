@@ -168,3 +168,6 @@ class GestureClassifier(nn.Module):
             in_channels = 2 * self.snippet_length
         # modify parameters, assume the first blob contains the convolution kernels
         params = [x.clone() for x in conv_layer.parameters()]
+        kernel_size = params[0].size()
+        
+        
