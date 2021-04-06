@@ -175,5 +175,5 @@ class GestureClassifier(nn.Module):
         new_conv = nn.Conv2d(in_channels, conv_layer.out_channels,
                              conv_layer.kernel_size, conv_layer.stride, conv_layer.padding,
                              bias=True if len(params) == 2 else False)
-        
+        new_conv.weight.data = new_kernels        
         
