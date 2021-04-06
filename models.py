@@ -177,3 +177,4 @@ class GestureClassifier(nn.Module):
                              bias=True if len(params) == 2 else False)
         new_conv.weight.data = new_kernels        
         
+        if len(params) == 2:
