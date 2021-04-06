@@ -179,4 +179,5 @@ class GestureClassifier(nn.Module):
         
         if len(params) == 2:
             new_conv.bias.data = params[1].data   # add bias if neccessary
-        layer_name = list(container.state_dict().keys())[0][:-7] 
+        layer_name = list(container.state_dict().keys())[0][:-7]  # remove .weight suffix to get the layer name
+
