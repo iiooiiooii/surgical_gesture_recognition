@@ -171,3 +171,9 @@ class GestureClassifier(nn.Module):
         kernel_size = params[0].size()
         new_kernel_size = kernel_size[:1] + (in_channels,) + kernel_size[2:]        
         new_kernels = params[0].data.mean(dim=1, keepdim=True).expand(new_kernel_size).contiguous()        
+
+        new_conv = nn.Conv2d(in_channels, conv_layer.out_channels,
+                             conv_layer.kernel_size, conv_layer.stride, conv_layer.padding,
+                             bias=True if len(params) == 2 else False)
+        
+        
