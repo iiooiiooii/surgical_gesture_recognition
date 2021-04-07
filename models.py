@@ -192,4 +192,5 @@ def inflate_weights(w, k):
     return res
 
 def inflate_tensor(t_2D, k):
+    t_3D = torch.zeros([k, t_2D.shape[0], t_2D.shape[1]])
 
