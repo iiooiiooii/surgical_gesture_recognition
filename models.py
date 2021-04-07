@@ -187,4 +187,5 @@ class GestureClassifier(nn.Module):
 def inflate_weights(w, k):
     res = torch.zeros(w.shape[0], w.shape[1], k, w.shape[2], w.shape[3])
     for i in range(w.shape[0]):
+        for j in range(w.shape[1]):
 
