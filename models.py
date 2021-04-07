@@ -191,3 +191,5 @@ def inflate_weights(w, k):
             res[i, j] = inflate_tensor(w[i, j], k)
     return res
 
+def inflate_tensor(t_2D, k):
+
