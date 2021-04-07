@@ -189,4 +189,5 @@ def inflate_weights(w, k):
     for i in range(w.shape[0]):
         for j in range(w.shape[1]):
             res[i, j] = inflate_tensor(w[i, j], k)
+    return res
 
