@@ -181,4 +181,5 @@ class GestureClassifier(nn.Module):
             new_conv.bias.data = params[1].data   # add bias if neccessary
         layer_name = list(container.state_dict().keys())[0][:-7]  # remove .weight suffix to get the layer name
         # replace the first convlution layer
+        setattr(container, layer_name, new_conv)
 
