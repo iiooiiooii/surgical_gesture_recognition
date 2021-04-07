@@ -184,3 +184,4 @@ class GestureClassifier(nn.Module):
         setattr(container, layer_name, new_conv)
         return base_model
 
+def inflate_weights(w, k):
