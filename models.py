@@ -196,3 +196,4 @@ def inflate_tensor(t_2D, k):
     for i in range(k):
         t_3D[i] = t_2D
     t_3D.div_(k)
+    return t_3D
