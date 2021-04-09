@@ -195,3 +195,4 @@ def inflate_tensor(t_2D, k):
     t_3D = torch.zeros([k, t_2D.shape[0], t_2D.shape[1]])
     for i in range(k):
         t_3D[i] = t_2D
+    t_3D.div_(k)
