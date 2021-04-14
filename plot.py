@@ -8,3 +8,6 @@ import os
 import numpy as np
 import scipy.io
 import torch
+
+def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_colins_result, exp_descriptions,
+                                  sequence_to_visualize, exps_to_evaluate, eval_scheme, eval_freq, model_no):
