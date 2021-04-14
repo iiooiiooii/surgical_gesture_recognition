@@ -18,3 +18,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     for exp in exps_to_evaluate:
         eval_file = os.path.join(model_dir, "Eval", eval_scheme, "{}Hz".format(eval_freq), eval_type, exp,
                                  "{}.pth.tar".format(model_no))
+        eval_results = torch.load(eval_file)
