@@ -16,3 +16,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     eval_type = 'plain'
     avg_exp_results = {}
     for exp in exps_to_evaluate:
+        eval_file = os.path.join(model_dir, "Eval", eval_scheme, "{}Hz".format(eval_freq), eval_type, exp,
