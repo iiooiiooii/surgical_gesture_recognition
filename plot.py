@@ -15,3 +15,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     metric = 'acc'
     eval_type = 'plain'
     avg_exp_results = {}
+    for exp in exps_to_evaluate:
