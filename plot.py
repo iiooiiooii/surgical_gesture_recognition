@@ -21,3 +21,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         eval_results = torch.load(eval_file)
         for key in eval_results:
             if key == 'overall':
+                pass
