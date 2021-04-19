@@ -23,3 +23,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
             if key == 'overall':
                 pass
             else:  # key = video_id
+                results_per_video = eval_results[key]
