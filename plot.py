@@ -34,6 +34,7 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     if sequence_to_visualize == "lowest":
         sequence = avg_exp_results[0][0]
     elif sequence_to_visualize == "highest":
+        sequence = avg_exp_results[-1][0]
 
                  
                     
