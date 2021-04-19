@@ -29,6 +29,7 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
                 avg_exp_results[key].append(results_per_video[metric])
     for video_id in avg_exp_results:
         avg_exp_results[video_id] = np.mean(avg_exp_results[video_id])
+    avg_exp_results = [(video_id, avg_accuracy) for video_id, avg_accuracy in avg_exp_results.items()]
 
                  
                     
