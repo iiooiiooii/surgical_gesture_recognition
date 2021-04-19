@@ -26,6 +26,7 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
                 results_per_video = eval_results[key]
                 if key not in avg_exp_results:
                     avg_exp_results[key] = []
+                avg_exp_results[key].append(results_per_video[metric])
 
                     
                     
