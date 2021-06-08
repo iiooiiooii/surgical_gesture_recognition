@@ -39,5 +39,5 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         sequence = avg_exp_results[len(avg_exp_results) // 2][0]
     elif sequence_to_visualize == "median":
         sequence = avg_exp_results[len(avg_exp_results) // 2][0]                 
-    else:                    
-                    
+    else:
+      print("Unclear which sequence to visualize. Should be one of ['lowest', 'median', 'highest']")                    
