@@ -42,3 +42,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     else:
       print("Unclear which sequence to visualize. Should be one of ['lowest', 'median', 'highest']")
       return
+    sequences_to_plot = []
