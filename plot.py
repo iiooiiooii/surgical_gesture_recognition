@@ -44,3 +44,5 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
       return
     sequences_to_plot = []
     for exp in exps_to_compare:
+        eval_file = os.path.join(model_dir, "Eval", eval_scheme, "{}Hz".format(eval_freq), exp,
+                                 "{}.pth.tar".format(model_no))
