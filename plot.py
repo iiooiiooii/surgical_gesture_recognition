@@ -78,3 +78,5 @@ def _plot_label_sequences(label_seqs, seq_names, num_classes, fig_width=8, fig_h
 
     num_seqs = len(label_seqs)
     figsize = (fig_width, num_seqs * fig_height_per_seq)
+    fig, axes = plt.subplots(nrows=num_seqs, ncols=1, sharex=True, figsize=figsize,
+                             gridspec_kw={'wspace': 0, 'hspace': 0})
