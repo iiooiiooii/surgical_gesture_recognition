@@ -69,3 +69,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     out_file = os.path.join(out_dir, sequence_to_visualize + ".svg")
     fig, axes = _plot_label_sequences(sequences_to_plot, exp_descriptions, num_classes=10)
     plt.tight_layout()
+    plt.savefig(out_file)
