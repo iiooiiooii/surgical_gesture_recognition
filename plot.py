@@ -50,3 +50,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         sequences_to_plot.append(eval_results[sequence]['P'])
     if path_to_colins_result:  # find results reproduced from Colin Lea et al.
         data_splits = {'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8}
+        sequence_id = sequence.split('_')[-1]  # e.g. "F002"
