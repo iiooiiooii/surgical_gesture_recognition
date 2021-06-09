@@ -62,3 +62,5 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
      eval_file = os.path.join(model_dir, "Eval", eval_scheme, "{}Hz".format(eval_freq), exps_to_compare[0],
                              "{}.pth.tar".format(model_no))
      eval_results = torch.load(eval_file)
+     sequences_to_plot.append(eval_results[sequence]['Y'])
+ 
