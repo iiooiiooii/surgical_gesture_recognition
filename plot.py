@@ -64,3 +64,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
      eval_results = torch.load(eval_file)
      sequences_to_plot.append(eval_results[sequence]['Y'])
  
+    if not os.path.exists(out_dir):
