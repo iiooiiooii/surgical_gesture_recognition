@@ -77,3 +77,4 @@ def _plot_label_sequences(label_seqs, seq_names, num_classes, fig_width=8, fig_h
     text_offset = 50
 
     num_seqs = len(label_seqs)
+    figsize = (fig_width, num_seqs * fig_height_per_seq)
