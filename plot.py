@@ -71,3 +71,6 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     plt.tight_layout()
     plt.savefig(out_file)
     plt.close(fig)
+
+def _plot_label_sequences(label_seqs, seq_names, num_classes, fig_width=8, fig_height_per_seq=0.4):
+    max_seq_length = 2200
