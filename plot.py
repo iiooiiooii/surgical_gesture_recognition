@@ -52,3 +52,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         data_splits = {'B': 1, 'C': 2, 'D': 3, 'E': 4, 'F': 5, 'G': 6, 'H': 7, 'I': 8}
         sequence_id = sequence.split('_')[-1]  # e.g. "F002"
         user_id = sequence_id[0]
+        trial_no = int(sequence_id[1:])
