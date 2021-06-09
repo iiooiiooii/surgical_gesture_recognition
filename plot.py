@@ -66,3 +66,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
  
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
+    out_file = os.path.join(out_dir, sequence_to_visualize + ".svg")
