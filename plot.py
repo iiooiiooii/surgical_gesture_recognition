@@ -70,3 +70,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
     fig, axes = _plot_label_sequences(sequences_to_plot, exp_descriptions, num_classes=10)
     plt.tight_layout()
     plt.savefig(out_file)
+    plt.close(fig)
