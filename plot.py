@@ -58,4 +58,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         trial_result = split_results[trial_no - 1].squeeze()
         sequences_to_plot.append(trial_result)
         
-        
+     # add ground truth       
