@@ -55,3 +55,4 @@ def visualize_gesture_predictions(out_dir, model_dir, exps_to_compare, path_to_c
         trial_no = int(sequence_id[1:])
         mat = scipy.io.loadmat(os.path.join(path_to_colins_result, "Split_{}.mat".format(data_splits[user_id])))
         split_results = mat['P'].squeeze()
+        trial_result = split_results[trial_no - 1].squeeze()
